@@ -4,7 +4,6 @@
 
 .link-btn {
 	font-size: 0.9rem;
-	font-family: Cascadia Mono SemiBold;
 	background-color: #615a5a;
 	border: none;
 	color: white;
@@ -13,4 +12,14 @@
 
 .link-btn:hover {
 	background-color: #161616;
+}
+
+@font-face {
+	font-family: CMS;
+	src: url(../fonts/CascadiaMono-SemiBold.ttf);
+	font-display: swap;
+}
+
+html,h1,button {
+	font-family: CMS;
 }
