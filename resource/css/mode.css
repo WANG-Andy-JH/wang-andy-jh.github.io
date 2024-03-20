@@ -1,0 +1,16 @@
+/*
+	网页样式引用模版文件
+*/
+
+.link-btn {
+	font-size: 0.9rem;
+	font-family: Cascadia Mono SemiBold;
+	background-color: #615a5a;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+}
+
+.link-btn:hover {
+	background-color: #161616;
+}
