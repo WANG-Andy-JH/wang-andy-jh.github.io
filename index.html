@@ -1,0 +1,85 @@
+<!--
+Webname：Index of our theme；
+Description：Navigate the boring webs；
+Create time：21.3.2024；
+Last modified：21.3.2024;
+Browser：Safari, Webkit
+Platform：macOS、Windows、Linux、iOS、Android；
+JQuery：Safari；
+-->
+
+<!DOCTYPE html>
+<!-- overall style -->
+<style>
+    html{margin:0px;padding:0px;height: 100%; overflow:hidden}
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index of OUR Theme</title>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="css/slider.css">                                                        
+    <link rel="stylesheet" href="css/mode.css">    <!-- 模版，弹出和滑动 -->
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body>     
+<!-- Content -->
+    <div>
+        <!-- Navigation -->     
+        <div class="cd-slider-nav"> <!-- 于css/slider中定义*/ -->
+            <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active selected">
+                            <a class="nav-link" href="#0" data-no="1">Welcome to our blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="2">Previous Memo</a>
+                        </li>
+                    </ul>
+            </nav>
+        </div> 
+<!--Page 1-->
+        <ul class="cd-slider">  
+            <li class="selected">
+                <div class="cd-full-width">
+                    <div class="container-fluid js-tm-page-content tm-page-1" data-page-no="1">
+                        <div style="margin-top: -5%;">
+                            <h2 class="tm-site-name-1" >Moments</h2>
+                            <div class="tm-moment-box">
+                                <div class="tm-bg-white-translucent tm-textbox tm-textbox-1-col">
+                                    <h3>Lucky TY -- 18.03.2024</h3>
+                                </div>
+                            </div>
+                                
+                            <button class="tm-view-btn" onclick="window.location.href='./webs/LuckyTY/index.html'">
+                                View
+                            </button>
+
+                        </div>
+                    </div>
+                </div> 
+            </li>
+            <li>
+                <!-- 弹性盒子 -->
+                <div class="cd-full-width">
+<!--Page 2-->
+                    <div class="container-fluid js-tm-page-content" data-page-no="2">                           
+                        <div>
+                            <div class="row">                                     
+                                <h2 class="tm-section-title">Websites Archive</h2>
+                                <a class="tm-text tm-font-w-400" href="./webs/Focus/index.html">1. Andy Stay Focus on TY -- 27.01.2024</a>
+                            </div>
+                        </div>    
+                    </div>                       
+                </div> <!-- cd-full-width结束 -->
+            </li>
+        </ul> <!-- cd-slider结束 -->
+    </div> <!--结束-->
+    <!-- load JS files -->
+    <script src="js/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/)链接js库 -->
+    <script src="js/slider.js"></script>  
+</body>
+</html>

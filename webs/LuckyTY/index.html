@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="转盘抽奖">
+<meta name="description" content="转盘抽奖">
+<meta name="robots" content="all">
+<meta name="baiduspider" content="all">
+<meta name="googlebot" content="all">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>ANDY&TY</title>
+<link rel="stylesheet" href="./resource/css/mode.css"> 
+
+<h1 style="text-align: center; margin-top: 3%; font-size: 250%;"> Let's Go, Andy Love TY! </h1>
+
+<style>
+    html{margin:0px;padding:0px;height: 100%; overflow:hidden}
+    body{background-color:white;}
+    .wrapper{width:100%;max-width:40%;margin:0px auto;position: relative;}
+    .part2{background:url(./resource/part2-bg2.png) left top no-repeat;padding-top:100%;background-size:100% 100%;position:relative;}
+    .rotate-pointer{position:absolute;top:50%;left:50%;width:30%;height:30%;margin-left:-15%;margin-top:-15%;background:url(./resource/pointer.png) center center no-repeat;background-size:100% 100%;}
+
+
+    .part2 {
+      
+      transition: transform 10.5s;
+      transition-timing-function: cubic-bezier(0.42, 0, 0, 0.99); /*调整旋转速度和起始速率*/
+    }
+    
+
+</style>
+
+</head>
+
+<div class="wrapper" id = "wrapper">
+    <div class = "part2">
+        
+    </div>
+    <div id = "pointer" class = "rotate-pointer" data-click = ""></div>
+</div>
+<script src="./resource/jquery.min.js"></script>
+<script>
+// 测试抽奖的
+(function(){
+    var btn = $("#pointer"),
+        options = {
+        };
+ 
+    // 奖品的角度列表
+    options.gifts = {
+        "4":{
+            id : "4",
+            name : "恭喜田野姐姐子获得：神秘礼包",
+            angleStart : 136,
+            angleEnd : 180,
+            tips : "包含好多好多零食，记住不止DHS喔！愛你La！"
+        }
+    };
+
+    // 获取[n,m]的随机整数
+    function getRandom (n, m) {
+        var num = Math.floor(Math.random() * (m - n + 1) + n)
+        return num
+    }
+    function _begin(){
+
+        var base = 2160; //和transition: transform 10.5s;对应
+
+        var result = getRandom(136, 180); // 随机
+        
+        var _key = null; // 内定奖品id
+
+        if (_key) {
+            result = getRandom(options.gifts[_key].angleStart,options.gifts[_key].angleEnd)
+        }
+
+        // result = 40
+        var deg = (base+result)
+
+        $(".part2").css({"transform":"rotate("+deg+"deg)"});
+
+        $(".part2").on('transitionend',function(){
+            console.log(result)
+            for (var key in options.gifts) {
+
+              if (options.gifts[key].angleStart <= result && result<=options.gifts[key].angleEnd) {
+
+                confirm(options.gifts[key].tips);
+                window.location.reload()
+
+              }
+            }
+        })
+    }
+ 
+    btn.on("click",_begin);
+})();
+
+</script>
+
+<div style="text-align: center; margin-top: 1%;">
+    <button  class="link-btn" onclick="window.location.href='./resource/index2.html'">
+        Move to myStyle
+    </button>
+</div> 
+
+</html>

@@ -1,0 +1,337 @@
+/*
+	Body
+*/
+body {
+	background-color: #DDDDDD; /*#282F39*/
+	color: black;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 300;	
+	width: 100%;
+	height: 100%;;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+/*
+	Navi bar
+*/
+.navbar{
+	margin-top: 5%; /*控制导航菜单的位置*/
+}
+
+.navbar-nav .nav-item { 
+	float: none; 
+}
+.navbar-nav .nav-item+.nav-item { margin-left: 0; }
+
+.navbar-nav .nav-link {
+	background-color: rgba(255,255,255,0.8);
+	color: black;
+    display: table-cell;
+    font-weight: 400;
+    font-size: 1em;
+	font-family: CMS;
+	vertical-align: middle; /*文字对中*/
+	width: 200px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 3%;
+    height: 45px; /*navbar模块按钮参数*/
+}
+
+
+/*
+	Slider
+*/
+.cd-slider {
+	font-family: CMS;
+}
+
+.cd-slider li {
+background-position: center center;
+background-size: cover;/*全屏显示*/
+background-repeat: no-repeat;
+}
+
+.cd-slider li:first-of-type {
+background-color: #2c343b;
+background-image: url("../img/page1_bkg.jpg")
+}
+
+.cd-slider li:nth-of-type(2) {
+background-color: #2c343b;
+background-image: url("../img/page2_bkg.jpg")
+}
+
+.cd-slider .cd-full-width,
+.cd-slider .cd-half-width {
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 1;
+text-align: center;
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+}
+  
+  
+
+ul { padding: 0; margin: 0; }
+p:last-child { margin-bottom: 0; }
+a, button { transition: all 0.3s ease; }
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.container-fluid { width: 100%; } 
+
+
+
+.cd-slider-nav {
+	position: absolute;
+	background: none; /*navbar模块参数*/
+}
+
+button:focus { outline: none; }
+
+
+.cd-slider-nav .nav-item.selected,
+.cd-slider-nav .nav-link:hover {
+	background-color: rgba(255,255,255,1);
+	color: #5394D6;
+}/*
+
+/* 模块 */
+
+.cd-slider .tm-site-name-1 {
+	font-size: 5em;
+	font-weight: 400;
+	text-align: center;
+
+}
+
+.cd-slider .tm-site-name-2 { 
+	font-size: 3em;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 20px;
+	margin-bottom: 2%;
+}
+
+.tm-site-name { margin-bottom: 35px; }
+.cd-slider { height: 100vh; }
+
+.cd-slider li { list-style: none; }
+
+.tm-bg-white-translucent {	
+	background-color: rgba(255,255,255,0.75);	
+}
+
+/*动画文字设置*/
+
+.tm-bg-white-translucent p { color: black; }
+
+.tm-textbox{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 10px;
+}
+
+.cd-slider h2, .cd-slider p {
+	max-width: none;
+	width: 100%;
+}
+
+.cd-slider h2 {
+font-size: 30px;
+color: white;
+}
+.cd-slider p {
+font-size: 1.4rem;
+line-height: 1.4;
+}
+
+.cd-slider h2.tm-section-title {
+font-size: 3.2rem;
+font-weight: 400;
+text-shadow: 0px 2px 1px rgba(0, 0, 0, 1);
+}
+
+.tm-moment-box {
+	width: 50%;
+	margin: auto;
+	margin-bottom: 5%;
+}
+
+.tm-textbox-1-col { max-width: 100%; }/*与盒子同宽*/
+
+.tm-text {
+	color: #000000;
+}
+
+.cd-slider .tm-text { 
+	font-size: 1.3em;
+	line-height: 1.8; 
+}
+
+.tm-2-col-container {		
+	max-width: 80%;
+	margin: 0 auto;
+}/*居中多个textbox*/
+
+.tm-2-col-textbox { 
+	max-width: 40%; 
+	-webkit-flex: 0 1 auto; 
+	    -ms-flex: 0 1 auto; 
+			flex: 0 1 auto; 
+}/*弹性盒子动画252行有补充参数*/
+
+.cd-slider h2.tm-text-title {
+	color:rgba(255, 0, 0, 1);
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.tm-2-col-textbox {	margin-bottom: 30px; }
+
+.tm-font-w-400 { font-weight: 400; }
+
+/*
+	Page1 盒子
+*/
+
+
+.cd-full-width {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;/*弹性盒子垂直向下布局*/
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: center;/*弹性盒内居中垂直方向（纵轴）*//*调节盒 同高度*/
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;/*弹性盒内居中主轴方向（横轴）*//*调节盒 同高度*/
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.form-control {
+	background-color: rgba(255,255,255,0.7);
+	height: 2em;
+	margin-top: 1rem ;/*输入格宽度控制*/
+	text-indent:15px
+}/*.form-control全体输入格控制*/
+
+.form-control::-webkit-input-placeholder {
+   color: #000000;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: #000000;  
+}
+.form-control:-ms-input-placeholder {  
+   color: #000000;  
+}
+
+.ta-control {
+	font-size: 0.6em;
+	width: 30%;
+	opacity: 78%;
+	border: none;
+	border-radius: 10px;
+}
+
+.tm-view-btn {
+	background-color: #615a5a;
+	border: none;
+	color: white;
+	padding: 15px 35px;
+	font-size: 0.9em;
+	margin: auto;
+	margin-top: -3%;
+
+}
+
+.tm-view-btn:hover {
+	background-color: #161616;
+}
+
+
+/* 过程控制 最低要求900px宽度 1440*900电脑*/
+
+@media only screen and (min-width: 900px) {
+
+	.cd-slider .js-tm-page-content.tm-page-1 { margin-top: 120px; }
+
+	.navbar-nav .nav-item {	float: left; }
+
+	.cd-slider-nav a,
+	.navbar-nav .nav-link {
+		background-color: rgba(255,255,255,0.4);
+	}
+
+	.cd-slider-nav .nav-item.selected .nav-link,
+	.cd-slider-nav .nav-link:hover {
+		background-color: rgba(255,255,255,0.7);
+	}
+
+	.cd-slider-nav li {	
+		display: inline-block; 
+		width: auto;
+		height: auto;
+	}
+
+	.navbar-nav .nav-item+.nav-item { margin-left: 1rem; }
+
+	.cd-slider-nav a,
+	.navbar-nav .nav-link {
+		font-size: 1.1em;
+		height: 80px;
+	}/*调节盒高度 hero-slider-style.css里面调节文字位置*/
+
+	.cd-slider .cd-full-width { padding-top: 0; }
+	
+	.tm-2-col-container { 
+		display: -webkit-flex; 
+		display: -ms-flexbox; 
+		display: flex; 
+	}/*声明定义弹性盒因为弹性盒仅在电脑端适用*/
+
+	.tm-2-col-textbox {	
+		margin-bottom: 0;
+		margin-right: 20px;
+	}/*调节盒间距 103行最初参数*/
+
+	.tm-2-col-textbox:last-child { margin-right: 0;	}	
+}
+/*移动端调试未成功
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+	.cd-slider-nav a, 
+	.navbar-nav .nav-link {
+		font-size: 1em;
+		width: 95px;
+	    height: 60px;
+	}
+
+	.cd-slider-nav .nav-item+.nav-item { margin-left: 1rem; }
+}
+
+@media only screen and (min-width: 992px) {
+	.cd-slider-nav .nav-item+.nav-item { margin-left: 1.5rem; }
+}
+
+@media only screen and (min-width: 1170px) {
+
+	.cd-slider h2, .cd-hero-slider p { margin-bottom: 25px; }
+	.cd-slider p:last-child { margin-bottom: 0; }
+	.cd-slider .cd-full-width { padding-top: 0; }
+	.cd-slider .tm-text { font-size: 1em; }
+}
+*/

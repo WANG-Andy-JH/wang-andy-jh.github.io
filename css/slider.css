@@ -1,0 +1,208 @@
+html { font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #d44457;
+  text-decoration: none;
+}
+
+img { 
+  max-width: 100%; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* 主要组件 */
+.cd-header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #21272c;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 70px;
+    background-color: transparent;
+  }
+}
+
+/* Slider*/
+.cd {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cd-slider {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+.cd-slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.cd-slider li.selected {
+  /* this is the visible slide */
+  position: relative;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.cd-slider li.move-left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.cd-slider li.is-moving, .cd-slider li.selected {
+  /* the is-moving class is assigned to the slide which is moving outside the viewport */
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+/*单次翻页动画 */
+@media only screen and (min-width: 768px) {
+  .cd-slider .cd-half-width {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  .cd-slider .move-left .cd-half-width {
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    transform: translateX(-40px);
+  }
+  .cd-slider .selected .cd-half-width {
+    /* 当前可见页 */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .cd-slider .cd-full-width h2,
+  .cd-slider .cd-full-width p,
+  .cd-slider .cd-full-width {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+    /* h2和p类文字 从左向右滑动出现动画 */
+  .cd-slider .move-left .cd-full-width h2,
+  .cd-slider .move-left .cd-full-width p,
+  .cd-slider .move-left .cd-full-width {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  .cd-slider .selected .cd-full-width h2,
+  .cd-slider .selected .cd-full-width p,
+  .cd-slider .selected .cd-full-width  {
+    /* 当前的转动至的页面的属性 */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .cd-slider li.is-moving .cd-full-width h2,
+  .cd-slider li.is-moving .cd-full-width p,
+  .cd-slider li.is-moving .cd-full-width  {
+    /* 模块会移动渐变透明 延迟0s进入第一阶段，0.5s完成第二阶段*/
+    -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s, -moz-transform 0s 0.5s;
+    transition: opacity 0s 0.5s, transform 0s 0.5s;
+  }
+  .cd-slider li.selected h2 {
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s;
+    transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+  }
+  .cd-slider li.selected p {
+    -webkit-transition: opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s;
+    -moz-transition: opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s;
+    transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
+  }
+
+}/*屏幕宽度最低要求768px*/
+
+/* 导航 */
+.cd-slider-nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;/*第二优先级*/
+  text-align: center;/*控制列表位于中间*/
+  height: 55px;
+  opacity: 1;
+}
+
+.cd-slider-nav nav {
+  display: inline-block;
+  position: relative;
+}
+/*翻页间隔标记，没用
+.cd-slider-nav ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}*/
+.cd-slider-nav li {
+  display: inline-block;
+  width: 60px;
+}
+.cd-slider-nav li.selected a {
+  color: #2c343b;
+}
+
+.cd-slider-nav a {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  color: #a8b4be;
+  padding-top: 12px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
