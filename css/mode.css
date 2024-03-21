@@ -138,8 +138,8 @@ button:focus { outline: none; }
 .tm-bg-white-translucent p { color: black; }
 
 .tm-textbox{
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	border-radius: 10px;
 }
 
@@ -164,7 +164,7 @@ text-shadow: 0px 2px 1px rgba(0, 0, 0, 1);
 }
 
 .tm-moment-box {
-	width: 50%;
+	width: 45%;
 	margin: auto;
 	margin-bottom: 5%;
 }
@@ -264,9 +264,9 @@ text-shadow: 0px 2px 1px rgba(0, 0, 0, 1);
 }
 
 
-/* 过程控制 最低要求900px宽度 1440*900电脑*/
+/* 过程控制 最低要求400px宽度 */
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 400px) {
 
 	.cd-slider .js-tm-page-content.tm-page-1 { margin-top: 120px; }
 

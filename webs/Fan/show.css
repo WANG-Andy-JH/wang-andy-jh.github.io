@@ -1,0 +1,170 @@
+
+body{
+  background: grey;
+}
+.nav{
+  width:38%;
+  font:bold 0/50px Arial;
+  float:left;
+  margin:-1% auto 0;
+  margin-left: 10%;
+}
+
+.centeringcontroler{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav a{
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+   -o-transition: all 0.2s ease-in;
+   -ms-transition: all 0.2s ease-in;
+   transition: all 0.2s ease-in;
+}
+
+.nav li{
+  position:relative;
+  display:inline-block;
+  padding:0 16px;
+  font-size: 18px;
+  text-shadow:1px 0px 2px rgba(0,0,0,.5);
+  list-style: none outside none;
+}
+/*使用伪元素制作导航列表项分隔线*/
+    .nav li::before,.nav li::after{
+    content:"";
+    position:absolute;
+    top:14px;
+    height: 25px;
+    width: 1px;
+  }
+  .nav li::after{
+    right: 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2) 50%, rgba(255,255,255,0));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2) 50%, rgba(255,255,255,0));
+    background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2) 50%, rgba(255,255,255,0));
+    background: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2) 50%, rgba(255,255,255,0));
+    background: linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2) 50%, rgba(255,255,255,0));
+  }
+  .nav li::before{
+    left: 0;
+    background: -moz-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+    background: -webkit-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+    background: -o-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+    background: -ms-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+    background: linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+  }
+
+   /*删除第一项和最后一项导航分隔线*/
+.nav li:first-child::before{
+      background: none;
+  }
+        
+.nav li:last-child::after{
+      background: none;
+  }
+
+.nav a,
+.nav a:hover{
+  color:black;
+  text-decoration: none;
+}
+p:last-child { margin-bottom: 0; }
+.nav a, button { transition: all 0.3s ease; }
+.nav a:hover,
+.nav a:focus {
+text-decoration: none;
+outline: none;
+color: wheat;
+}
+a{
+text-decoration: none;
+color: white;
+}
+
+.title li a:hover{
+    color: wheat;
+    }
+#header .subtitle li {
+    height:50px;
+    line-height:50px;
+    float:left;
+    list-style-type:none;
+    font-size:15px;
+    margin-right:10px;
+    color:black;
+}
+.subtitle li a:link{
+    color:black;
+    text-decoration:none;
+}
+.subtitle li a:hover{
+    color:red;
+}
+
+body {font-family: Verdana,sans-serif;}
+ 
+    #main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 2%;
+    }
+    
+    #main a{
+      color:black;
+    }
+    #main a :hover{
+      color: darkred;
+    }
+/* 翻页框含artitlrtitle部分 */
+    #lside{
+    width:70%;
+    min-height: 80%;
+    background:white;
+    position: absolute;
+    top: 7%;
+    padding:1%;
+    float:left;
+    left: 14%;
+   }
+/* 正文部分 */
+   .textbox{
+    width: 90%;
+    float: right;
+    padding-right: 34px;
+    padding-bottom: 30px;
+   }
+
+     
+
+
+  
+
+
+@media only screen and (max-width:2880px) and (min-width:1920px) {
+  .nav{
+    width:38%;
+    font:bold 0/50px Arial;
+    float:left;
+    font-size: 20px;
+    margin:-1% auto 0;
+    margin-left: 12%;
+  }
+	
+}
+
+@media only screen and (max-width:9999px) and (min-width:2880px) {
+  .nav{
+    width:38%;
+    font:bold 0/50px Arial;
+    float:left;
+    font-size: 80px;
+    margin:-1% auto 0;
+    margin-left: 14%;
+  }
+	
+}
+
