@@ -3,11 +3,8 @@
     <head>
         <meta charset=utf-8>
         <title>Eliza Chinese</title>
-        
-        
-        
-        </script>  
-        <script>app.theme.init();</script> 
+    </head>
+    <body>
         <div class="container-fluid main-grid">
             <div class=main-center>
                 <section class="section section-demo">
@@ -22,8 +19,8 @@
 
                         <!-- Message box -->
 
-                        <div style="width: 80%; margin-left: 10%;"> 
-                            <div class="mb-3 message-panel" style="margin-top: 0.5%;">
+                        <div style="width: 80%; margin-left: 10%; height: 85%;"> 
+                            <div class="mb-3 message-panel">
                                 <ul class=message-list>
                                     <li><span class=computer>Eliza</span>：想聊点什么？ 
                                 </ul> 
@@ -32,7 +29,7 @@
 
                         <!-- Input box -->
 
-                        <div class=mb-3, style="text-align: center;">
+                        <div class=mb-3, style="text-align: center;margin-top:1%">
                             <input autofocus class="form-control message-input" style="margin-top: 0.5%; height: 36px; width: 80%; " id=input placeholder='Always respond in 中文' type=text> 
                         </div> 
 
@@ -40,12 +37,34 @@
                 </section> 
             </div>
         </div>    
+    </body>
     <style>
     
+    html,body {
+        height: 100%;
+        margin: 0;
+    }
+
+    h1{
+        margin: 0;
+        padding-top: 0.5%;
+    }
+    .container-fluid, .main-center, .container{
+        height: 100%;
+    }
+
+    .section-demo{
+        height: 5%;
+    }
+
+    .section-body{
+        height: 95%;
+    }
+
     .demo .message-panel {
         overflow-y: auto;
         padding: 6px 16px;
-        height: 450px;
+        height: 100%;
         background-color: #F7F7F7;
         border: 1px solid #AFAFAF;
         border-radius: 8px;
@@ -75,6 +94,7 @@
         color: #229FFF;
     }
     </style> 
+    <script>app.theme.init();</script> 
     <script>let demo = new function() {
         this.qaList = [
             {'Q': ['谢谢'], 'A': ['不客气!']},
@@ -167,10 +187,12 @@
                 }
             }
         })
-    })</script> <script>let urlBase = '';
+    })
+        let urlBase = '';
         let maxSize = 131072;
         let uploadMaxFilesize = 262144;
         let maxFileUploads = 20;
         app.options.setUrlBase(urlBase);
         app.options.setVariable(maxSize, uploadMaxFilesize, maxFileUploads);
         app.page.main();
+</script>
