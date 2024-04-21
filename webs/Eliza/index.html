@@ -3,8 +3,11 @@
     <head>
         <meta charset=utf-8>
         <title>Eliza Chinese</title>
-    </head>
-    <body>
+        
+        
+        
+        </script>  
+        <script>app.theme.init();</script> 
         <div class="container-fluid main-grid">
             <div class=main-center>
                 <section class="section section-demo">
@@ -19,8 +22,8 @@
 
                         <!-- Message box -->
 
-                        <div style="width: 80%; margin-left: 10%; height: 85%;"> 
-                            <div class="mb-3 message-panel">
+                        <div style="width: 80%; margin-left: 10%;"> 
+                            <div class="mb-3 message-panel" style="margin-top: 0.5%; height: 700px;">
                                 <ul class=message-list>
                                     <li><span class=computer>Eliza</span>：想聊点什么？ 
                                 </ul> 
@@ -29,7 +32,7 @@
 
                         <!-- Input box -->
 
-                        <div class=mb-3, style="text-align: center;margin-top:1%">
+                        <div class=mb-3, style="text-align: center;">
                             <input autofocus class="form-control message-input" style="margin-top: 0.5%; height: 36px; width: 80%; " id=input placeholder='Always respond in 中文' type=text> 
                         </div> 
 
@@ -37,34 +40,12 @@
                 </section> 
             </div>
         </div>    
-    </body>
     <style>
     
-    html,body {
-        height: 100%;
-        margin: 0;
-    }
-
-    h1{
-        margin: 0;
-        padding-top: 0.5%;
-    }
-    .container-fluid, .main-center, .container{
-        height: 100%;
-    }
-
-    .section-demo{
-        height: 5%;
-    }
-
-    .section-body{
-        height: 95%;
-    }
-
     .demo .message-panel {
         overflow-y: auto;
         padding: 6px 16px;
-        height: 100%;
+        height: 450px;
         background-color: #F7F7F7;
         border: 1px solid #AFAFAF;
         border-radius: 8px;
@@ -94,7 +75,6 @@
         color: #229FFF;
     }
     </style> 
-    <script>app.theme.init();</script> 
     <script>let demo = new function() {
         this.qaList = [
             {'Q': ['谢谢'], 'A': ['不客气!']},
@@ -135,7 +115,7 @@
             {'Q': ['王非凡', 'fan', '凡哥', '非凡'], 'A': ['凡总是吧，听说他还挺帅！', '凡哥学环境呢，你懂Ar吗？', '凡哥知道为什么咱们地球有温室效应。']},
             {'Q': ['王经宇', 'jy', '牛子'], 'A': ['是的他叫牛子！', '经宇回家开S车！', '他很帅，但纯牛马。']},
             {'Q': ['王谨鸿', 'Andy', 'andy', '鹏'], 'A': ['这个网站是我改装的，我叫王谨鸿，co-author！', '好想回重庆，Miss U from KLN!']},
-            {'Q': ['A', 'a', 'B', 'b', 'C', 'c', 'D', 'd'], 'A': ['I cant understand English, please try Eliza33.']},
+            {'Q': ['A', 'a', 'B', 'b', 'C', 'c', 'D', 'd'], 'A': ['I cant understand English, please try <a href="./original_version/index.html">Eliza33</a>.']},
             {'Q': [''], 'A': ['請繼續說下去', '可以說的更詳細一點嗎?', '這樣喔!我知道!', '然後呢?發生甚麼事?', '再來呢?可以多說一些嗎', '接下來呢?', '可以多告訴我一些嗎?', '多談談有關你的事，好嗎?', '想多聊一聊嗎', '可否多告訴我一些呢?']}
         ];
         this.sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
@@ -187,12 +167,10 @@
                 }
             }
         })
-    })
-        let urlBase = '';
+    })</script> <script>let urlBase = '';
         let maxSize = 131072;
         let uploadMaxFilesize = 262144;
         let maxFileUploads = 20;
         app.options.setUrlBase(urlBase);
         app.options.setVariable(maxSize, uploadMaxFilesize, maxFileUploads);
         app.page.main();
-</script>
