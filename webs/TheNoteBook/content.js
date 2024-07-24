@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var xhr = new XMLHttpRequest();
     
     // Get doc.
-    xhr.open('GET', 'assets/docs/default.md', true);
+    xhr.open('GET', './assets/docs/default.md', true);
     if (xhr.status <= 0) {
         contentElement.innerHTML = marked.parse("**You need to add local server** Terminal: http-server   <br/>**New Path** *http://localhost:8080/*");
     }
