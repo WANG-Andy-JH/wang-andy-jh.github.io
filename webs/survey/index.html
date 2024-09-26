@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <!-- Draw css -->
+    <link rel="stylesheet" href="draw/leaflet.draw.css" />
+    <!-- Locate css -->
+    <link rel="stylesheet" href="locate/L.Control.Locate.min.css" />
+    <!-- Input output css -->
+    <link rel="stylesheet" href="io/leaflet.io.css" />
+
+    <!-- Load js files -->
+    <script src="leaflet-src.js"></script>
+    <link rel="stylesheet" href="leaflet.css"/>
+
+    <!-- Load Draw js files -->
+    <script src="draw/Leaflet.draw.js"></script>
+    <script src="draw/Leaflet.Draw.Event.js"></script>
+    <link rel="stylesheet" href="draw/leaflet.draw.css"/>
+
+    <script src="draw/Toolbar.js"></script>
+    <script src="draw/Tooltip.js"></script>
+
+    <script src="draw/ext/GeometryUtil.js"></script>
+    <script src="draw/ext/LatLngUtil.js"></script>
+    <script src="draw/ext/LineUtil.Intersect.js"></script>
+    <script src="draw/ext/Polygon.Intersect.js"></script>
+    <script src="draw/ext/Polyline.Intersect.js"></script>
+    <script src="draw/ext/TouchEvents.js"></script>
+
+    <script src="draw/draw/DrawToolbar.js"></script>
+    <script src="draw/draw/handler/Draw.Feature.js"></script>
+    <script src="draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="draw/draw/handler/Draw.Marker.js"></script>
+    <script src="draw/draw/handler/Draw.Circle.js"></script>
+    <script src="draw/draw/handler/Draw.CircleMarker.js"></script>
+    <script src="draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+    <script src="draw/edit/EditToolbar.js"></script>
+    <script src="draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="draw/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="draw/Control.Draw.js"></script>
+
+    <script src="draw/edit/handler/Edit.Poly.js"></script>
+    <script src="draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="draw/edit/handler/Edit.Marker.js"></script>
+    <script src="draw/edit/handler/Edit.CircleMarker.js"></script>
+    <script src="draw/edit/handler/Edit.Circle.js"></script>
+
+    <!-- Load Locate js files -->
+    <script src="locate/L.Control.Locate.js"></script>
+
+    <!-- Load I/O js files -->
+    <script src="io/leaflet.io.js"></script>
+
+</head>
+<body>
+    <div id="map">
+        <div class="io">
+            <div class="import">
+                <input type="file" id="fileInput" accept=".geojson" class="import-input">
+                <button onclick="importGeoJSON()" class="import-button">导入GeoJSON</button>
+            </div>
+            <button onclick="exportGeoJSON()" class="export-button">导出GeoJSON</button>
+        </div>
+    </div>
+    <script src="leaflet.content.js"></script>
+</body>
+</html>
